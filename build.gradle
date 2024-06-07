@@ -1,0 +1,64 @@
+//--- Boilerplate
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath("com.anatawa12.forge:ForgeGradle:2.3-1.0.+") {
+            changing = true
+        }
+    }
+}
+
+// Apply boilerplate code
+apply from: rootProject.file('gradle/boilerplate.gradle')
+
+//--- Dependencies
+
+repositories {
+    maven { // JEI & Tinkers
+        name 'DVS1 Maven FS'
+        url 'https://dvs1.progwml6.com/files/maven'
+    }
+    maven { // CraftTweaker
+        name 'jared maven'
+        url 'https://maven.blamejared.com/'
+    }
+    maven { // ModMaven, there is a bunch of stuff on there
+        name 'ModMaven'
+        url "https://modmaven.dev/"
+    }
+}
+
+dependencies {
+    // at runtime, use the full JEI jar
+    runtimeOnly "mezz.jei:jei_1.12.2:4.16.1.301"
+
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.468"
+}
+
+//--- Resources
+
+processResources {
+    //Exclude GIMP images
+    exclude '**/*.xcf'
+    //Exclude batch
+    exclude '**/*.bat'
+    //Exclude template textures
+    exclude '**/*Template.png'
+
+    //already excluded from gitignore, but still appear to be included in a locally built jar
+    exclude '**/desktop.ini'
+    exclude '**/Thumbs.db'
+    exclude '**/.DS_Store'
+}
