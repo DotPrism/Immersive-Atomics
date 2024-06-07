@@ -1,0 +1,16 @@
+[
+{
+  "modid": "${modName}",
+  "name": "Immersive Engineering Addon Template",
+  "description": "${description}",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "${modURL}",
+  "updateUrl": "",
+  "authorList": ["${modContributors}"],
+  "credits": "${modDeveloper}",
+  "logoFile": "assets/${modName}/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

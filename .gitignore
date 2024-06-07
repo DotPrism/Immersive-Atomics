@@ -1,0 +1,34 @@
+# eclipse
+bin
+*.launch
+.settings
+*.metadata
+*.classpath
+*.settings/
+.project
+eclipse
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+*.class
+build
+bin/
+.gradle
+custom.gradle
+
+# Forge
+run/
+hs_err_pid*
+
+# Modworks Generated Sources
+src/main/generated/*
+
+# System
+*Thumbs.db
+*.ini
