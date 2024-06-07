@@ -8,6 +8,9 @@ bin
 .project
 eclipse
 
+# vscode
+.vscode/
+
 # idea
 out
 *.ipr
