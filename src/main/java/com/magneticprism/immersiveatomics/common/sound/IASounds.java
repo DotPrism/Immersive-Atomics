@@ -1,13 +1,13 @@
-package pl.pabilo8.ieaddon.common.sound;
+package com.magneticprism.immersiveatomics.common.sound;
 
 import net.minecraft.util.SoundEvent;
 import pl.pabilo8.modworks.annotations.sound.ModSound;
 
 /**
- * @author Pabilo8
- * @since 03.08.2023
+ * @author DotPrism
+ * @since 06.06.2024
  */
-public class IEAddonSounds
+public class IASounds
 {
 	@ModSound(subtitle = "*")
 	SoundEvent exampleSound;

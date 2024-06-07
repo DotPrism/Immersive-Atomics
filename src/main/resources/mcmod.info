@@ -1,7 +1,7 @@
 [
 {
   "modid": "${modName}",
-  "name": "Immersive Engineering Addon Template",
+  "name": "Immersive Atomics",
   "description": "${description}",
   "version": "${version}",
   "mcversion": "${mcversion}",

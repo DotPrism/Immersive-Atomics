@@ -38,11 +38,17 @@ repositories {
         name 'ModMaven'
         url "https://modmaven.dev/"
     }
+    maven { // CurseMaven
+        name "CurseMaven"
+        url "https://www.cursemaven.com"
+    }
 }
 
 dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly "mezz.jei:jei_1.12.2:4.16.1.301"
+
+    runtimeOnly "curse.maven:worldedit-225608:2941712"
 
     deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.468"
 }

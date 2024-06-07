@@ -1,13 +1,13 @@
-package pl.pabilo8.ieaddon.common.util;
+package com.magneticprism.immersiveatomics.common.util;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @author Pabilo8
- * @since 03.08.2023
+ * @author DotPrism
+ * @since 06.06.2024
  */
-public class IEAddonLogger
+public class IALogger
 {
 	public static boolean debug = false;
 	public static Logger logger;

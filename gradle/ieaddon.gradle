@@ -9,7 +9,8 @@ dependencies {
 
     //Lighting mod formerly called Albedo
     implementation "com.elytradev:mirage:2.0.3-rc3-SNAPSHOT"
-    compileOnly 'com.azanor:Baubles:1.12-1.5.2'
+//    compileOnly 'com.azanor:Baubles:1.12-1.5.2'
+    compileOnly "curse.maven:baubles-227083:2518667"
 
     implementation "org.squiddev:cc-tweaked-1.12.2:1.89.2"
     implementation "li.cil.oc:OpenComputers:MC1.12.2-1.7.5.221"
@@ -18,6 +19,9 @@ dependencies {
     compileOnly "curse.maven:immersive-petroleum-268250:3382321"
     compileOnly "curse.maven:immersive-posts-314645:2951672"
     compileOnly "curse.maven:immersive-technology-359407:3658279"
+    compileOnly "curse.maven:placebo-283644:2694382"
+    compileOnly "curse.maven:toast-control-271740:2707353"
+    compileOnly "curse.maven:worldedit-225608:2941712"
 }
 
 repositories {

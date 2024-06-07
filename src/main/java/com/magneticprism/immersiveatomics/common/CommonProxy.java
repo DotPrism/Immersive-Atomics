@@ -1,10 +1,10 @@
-package pl.pabilo8.ieaddon.common;
+package com.magneticprism.immersiveatomics.common;
 
 /**
  * Used for registration
  *
- * @author Pabilo8
- * @since 31.07.2023
+ * @author DotPrism
+ * @since 06.06.2024
  */
 public class CommonProxy
 {
