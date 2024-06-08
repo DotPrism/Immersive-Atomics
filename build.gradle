@@ -51,6 +51,8 @@ dependencies {
     runtimeOnly "curse.maven:worldedit-225608:2941712"
 
     deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.468"
+
+    implementation files("prismcore-1.12.2-0.1a.jar")
 }
 
 //--- Resources

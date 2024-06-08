@@ -1,5 +1,6 @@
 package com.magneticprism.immersiveatomics;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.magneticprism.immersiveatomics.common.CommonProxy;
+import com.magneticprism.immersiveatomics.common.IACreativeTab;
 import com.magneticprism.immersiveatomics.common.sound.IASounds;
 import com.magneticprism.immersiveatomics.common.util.IALogger;
 
@@ -24,6 +26,8 @@ public class ImmersiveAtomics
 {
 	public static final String MODID = "immersiveatomics";
 	public static final String VERSION = "@VERSION@";
+
+	public static final CreativeTabs iaTab = new IACreativeTab("Immersive Atomics");
 
 	@SidedProxy(clientSide = "com.magneticprism.immersiveatomics.client.ClientProxy", serverSide = "com.magneticprism.immersiveatomics.common.CommonProxy")
 	public static CommonProxy proxy;

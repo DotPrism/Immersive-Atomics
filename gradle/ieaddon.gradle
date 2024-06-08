@@ -22,6 +22,8 @@ dependencies {
     compileOnly "curse.maven:placebo-283644:2694382"
     compileOnly "curse.maven:toast-control-271740:2707353"
     compileOnly "curse.maven:worldedit-225608:2941712"
+    deobfCompile "curse.maven:immersive-intellisence-344344:4979247"
+    //deobfCompile "curse.maven:prismcore-941665:4892607"
 }
 
 repositories {
