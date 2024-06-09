@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.magneticprism.immersiveatomics.common.CommonProxy;
+import com.magneticprism.immersiveatomics.common.IAContent;
 import com.magneticprism.immersiveatomics.common.IACreativeTab;
 import com.magneticprism.immersiveatomics.common.sound.IASounds;
 import com.magneticprism.immersiveatomics.common.util.IALogger;
@@ -39,6 +40,7 @@ public class ImmersiveAtomics
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		IALogger.logger = event.getModLog();
+		IAContent.preInit();
 		proxy.preInit();
 	}
 
@@ -48,6 +50,7 @@ public class ImmersiveAtomics
 		//TODO: 03.08.2023 GUI handling
 //		NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, proxy);
 
+		IAContent.init();
 		proxy.init();
 		IASounds.init();
 	}
@@ -62,6 +65,6 @@ public class ImmersiveAtomics
 	public void loadComplete(FMLLoadCompleteEvent event)
 	{
 		//TODO: 03.08.2023 compat module loading
-//		IEAddonCompatModule.doModulesLoadComplete();
+		//IEAddonCompatModule.doModulesLoadComplete();
 	}
 }
