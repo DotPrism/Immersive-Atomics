@@ -67,4 +67,34 @@ public class ImmersiveAtomics
 		//TODO: 03.08.2023 compat module loading
 		//IEAddonCompatModule.doModulesLoadComplete();
 	}
+
+	public static <T extends IForgeRegistryEntry<?>> T register(T object, String name)
+	{
+		return registerByFullName(object, MODID+":"+name);
+	}
+	public static <T extends IForgeRegistryEntry<?>> T registerByFullName(T object, String name)
+	{
+		object.setRegistryName(new ResourceLocation(name));
+		return GameRegistry.register(object);
+	}
+	public static Block registerBlockByFullName(Block block, ItemBlock itemBlock, String name)
+	{
+		block = registerByFullName(block, name);
+		registerByFullName(itemBlock, name);
+		return block;
+	}
+	public static Block registerBlockByFullName(Block block, Class<? extends ItemBlock> itemBlock, String name)
+	{
+		try{
+			return registerBlockByFullName(block, itemBlock.getConstructor(Block.class).newInstance(block), name);
+		}catch(Exception e){e.printStackTrace();}
+		return null;
+	}
+	public static Block registerBlock(Block block, Class<? extends ItemBlock> itemBlock, String name)
+	{
+		try{
+			return registerBlockByFullName(block, itemBlock.getConstructor(Block.class).newInstance(block), MODID+":"+name);
+		}catch(Exception e){e.printStackTrace();}
+		return null;
+	}
 }
