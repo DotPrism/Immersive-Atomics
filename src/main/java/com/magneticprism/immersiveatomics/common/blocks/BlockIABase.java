@@ -211,7 +211,7 @@ public class BlockIABase<E extends Enum<E> & BlockIABase.IBlockEnum> extends Blo
 		return this;
 	}
 
-	public BlockAPBase setMetaUnhidden(int... meta)
+	public BlockIABase setMetaUnhidden(int... meta)
 	{
 		for (int i : meta)
 		{
