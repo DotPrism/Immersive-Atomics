@@ -1,0 +1,31 @@
+package com.magneticprism.immersiveatomics.core.registration;
+
+import blusunrize.immersiveengineering.api.crafting.IERecipeTypes.TypeWithClass;
+import com.magneticprism.immersiveatomics.common.block.multiblock.recipe.NuclearFuel;
+import com.magneticprism.immersiveatomics.core.lib.IALib;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+public class IARecipeTypes
+{
+    private static final DeferredRegister<RecipeType<?>> REGISTER = DeferredRegister.create(Registries.RECIPE_TYPE, IALib.MODID);
+    public static final TypeWithClass<NuclearFuel> NUCLEAR = register("nuclear", NuclearFuel.class);
+
+    private static <T extends Recipe<?>>
+    TypeWithClass<T> register(String name, Class<T> type)
+    {
+        RegistryObject<RecipeType<T>> regObj = REGISTER.register(name, () -> new RecipeType<>()
+        {
+        });
+        return new TypeWithClass<>(regObj, type);
+    }
+
+    public static void init()
+    {
+        REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+}

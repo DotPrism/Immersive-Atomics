@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.magneticprism.immersiveatomics.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "refmap": "com.magneticprism.immersiveatomics.refmap.json",
+  "client": [
+  ],
+  "mixins": [
+    "MixinFluidProtection"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -46,6 +46,13 @@ ordering="NONE"
 side="BOTH"
 
 [[dependencies.immersiveatomics]]
+modId="immersivetechnology"
+mandatory=true
+versionRange="[${version_it},]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.immersiveatomics]]
 modId="jei"
 mandatory=false
 versionRange="[${jei_version},)"

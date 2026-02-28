@@ -1,0 +1,11 @@
+Gas Centrifuge
+High Speed Refining!
+<&multiblock>The Gas Centrifuge is a large multiblock to turn Uranium Hexafluoride into Refined Uranium Oxide & Depleted Uranium.
+
+
+§lOperation§r
+    - §Uranium Hexafluoride§r is input on the left.
+    - §Refined Uranium Oxide§r is output on the front.
+    - Depleted Uranium is output in the back left.
+    - Hydrofluoric Acid is output in the middle left.
+    - Operational Chemical Waste is output in the front left.
